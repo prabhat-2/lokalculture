@@ -1,0 +1,29 @@
+.catalog-filters{align-items:end;background:#f8f7f3;border:1px solid var(--line);display:grid;gap:14px;grid-template-columns:repeat(4,1fr) auto;margin-bottom:35px;padding:18px}.catalog-filters label{color:var(--muted);font-size:10px;text-transform:uppercase}.catalog-filters select{background:#fff;border:1px solid #d8d3ca;display:block;font:inherit;margin-top:6px;padding:10px;width:100%}.pagination{display:flex;gap:8px;margin-top:35px}.pagination a{border:1px solid var(--line);color:var(--ink);padding:8px 12px;text-decoration:none}.pagination a.active,.pagination a:hover{background:var(--ink);color:#fff}.related-products{margin:auto;max-width:1180px;padding:0 5% 80px}.related-products h2{font:500 32px var(--serif)}@media(max-width:700px){.catalog-filters{grid-template-columns:1fr 1fr}.catalog-filters .button{grid-column:1/-1}}
+
+/* ---------- product gallery ---------- */
+.product-gallery{display:block}
+.product-gallery-main{aspect-ratio:4/5;overflow:hidden}
+.product-gallery-main img{display:block;height:100%;object-fit:cover;transition:transform .5s ease;width:100%}
+.product-gallery-main:hover img{transform:scale(1.04)}
+.product-gallery-thumbs{display:flex;gap:10px;margin-top:12px}
+.product-gallery-thumb{background:none;border:2px solid transparent;cursor:pointer;padding:0;width:64px}
+.product-gallery-thumb img{aspect-ratio:1;display:block;object-fit:cover;width:100%}
+.product-gallery-thumb.active{border-color:var(--ink)}
+
+/* ---------- ratings + reviews ---------- */
+.product-rating-summary{color:var(--muted);display:block;font-size:12px;margin:6px 0 10px;text-decoration:none}
+.product-rating-summary .stars{color:var(--saffron);letter-spacing:2px;margin-right:6px}
+.product-reviews{margin:0 auto 90px;max-width:760px;padding:0 5%}
+.product-reviews h2{font:500 30px var(--serif);margin:4px 0 18px}
+.reviews-summary{align-items:center;display:flex;gap:10px;margin-bottom:22px}
+.reviews-summary .stars{color:var(--saffron);font-size:18px;letter-spacing:2px}
+.reviews-summary span:last-child{color:var(--muted);font-size:12px}
+.review-form{border:1px solid var(--line);display:grid;gap:14px;margin-bottom:28px;padding:22px}
+.review-form label{color:var(--muted);display:block;font-size:11px;text-transform:uppercase}
+.review-form select,.review-form textarea{background:#fff;border:1px solid #d8d3ca;display:block;font:inherit;margin-top:6px;padding:10px;width:100%}
+.review-list{display:grid;gap:18px;list-style:none;margin:0;padding:0}
+.review-item{border-bottom:1px solid var(--line);padding-bottom:16px}
+.review-item .stars{color:var(--saffron);display:block;letter-spacing:2px;margin-bottom:4px}
+.review-item p{color:var(--muted);margin:6px 0 0}
+.review-empty{color:var(--muted)}
+

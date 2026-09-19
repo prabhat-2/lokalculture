@@ -1,0 +1,30 @@
+/* Homepage collection tabs and primary-navigation menus. */
+.category-nav{align-items:center;gap:30px;padding:0 5%;position:relative;z-index:10}
+.nav-menu{position:relative}
+.nav-menu>a{display:inline-block;padding:16px 0}
+.nav-menu>a:focus-visible,.nav-toggle:focus-visible,.tabs button:focus-visible,.heart:focus-visible{outline:2px solid var(--saffron);outline-offset:4px}
+.nav-toggle{background:none;border:0;color:var(--ink);cursor:pointer;display:none;font:18px/1 var(--sans);padding:12px 0 12px 4px}
+.nav-dropdown{background:#fff;border:1px solid var(--line);box-shadow:0 14px 30px rgba(36,35,31,.13);display:grid;grid-template-columns:repeat(2,minmax(130px,1fr));left:50%;min-width:280px;opacity:0;padding:13px;pointer-events:none;position:absolute;top:calc(100% - 5px);transform:translate(-50%,-8px);transition:opacity .18s ease,transform .18s ease;visibility:hidden;z-index:20}
+.nav-dropdown a{color:var(--ink);font-size:10px;padding:9px;text-transform:none}
+.nav-dropdown a:hover,.nav-dropdown a:focus-visible{background:var(--paper);color:var(--saffron);outline:none}
+.nav-menu.is-open .nav-dropdown{opacity:1;pointer-events:auto;transform:translate(-50%,0);visibility:visible}
+.product-grid{gap:22px;grid-template-columns:repeat(4,minmax(0,1fr));justify-content:stretch}
+.product-image{aspect-ratio:4/5;height:auto}
+.product-image>a{display:block;height:100%}
+.product-card-link{color:var(--ink);display:block;text-decoration:none}
+.product-card-link h3{transition:color .2s ease}
+.product-card:hover .product-card-link h3,.product-card-link:focus-visible h3{color:var(--saffron)}
+.product-card-link:focus-visible{outline:2px solid var(--saffron);outline-offset:5px}
+.heart{cursor:pointer}
+.heart.saved{background:var(--ink);color:#fff}
+.product-card h3{font-size:17px}
+
+@media (max-width:900px){.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:700px){
+    .category-nav{align-items:stretch;display:block;padding:0}
+    .nav-menu{border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto}
+    .nav-menu>a{padding:14px 5%}
+    .nav-toggle{display:block;margin-right:5%;padding:12px}
+    .nav-dropdown{border:0;border-top:1px solid var(--line);box-shadow:none;display:none;grid-column:1/-1;grid-template-columns:repeat(2,minmax(0,1fr));left:auto;min-width:0;opacity:1;padding:8px 5% 14px;pointer-events:auto;position:static;transform:none;visibility:visible}
+    .nav-menu.is-open .nav-dropdown{display:grid}
+}

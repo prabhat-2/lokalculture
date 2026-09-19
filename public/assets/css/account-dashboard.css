@@ -1,0 +1,51 @@
+/* Editorial dashboard styling for signed-in Lokal Culture customers. */
+.account-header{background:rgba(248,247,243,.96);gap:0;padding:22px 8%}
+.account-header nav{align-items:center;display:flex;gap:24px}
+.account-header>a:not(.brand),.account-header nav a{color:var(--ink);font-size:11px;text-decoration:none}
+.account-header nav a:hover{color:var(--saffron)}
+.account-header a:focus-visible,.account-card:focus-visible,.panel-link:focus-visible{outline:2px solid var(--saffron);outline-offset:4px}
+.account-shell{max-width:1200px;padding:64px 5% 78px}
+.account-dashboard{display:grid;gap:34px}
+.dashboard-hero{background:linear-gradient(115deg,#f1eee5,#faf9f5 63%,#eee8dd);border-left:3px solid var(--saffron);padding:42px 46px}
+.account-dashboard h1{font:500 clamp(42px,5vw,62px)/1.05 var(--serif);letter-spacing:-.035em;margin:0}
+.dashboard-intro{font-size:15px;margin:13px 0 0;max-width:520px}
+.account-dashboard .dashboard-grid{display:grid;gap:16px;grid-template-columns:repeat(4,1fr)}
+.account-card{background:#fff;border:1px solid var(--line);border-top:2px solid transparent;color:var(--ink);display:flex;flex-direction:column;min-height:235px;padding:25px;text-decoration:none;transition:border-color .24s ease,box-shadow .24s ease,transform .24s ease}
+.account-card:hover{border-top-color:var(--saffron);box-shadow:0 15px 30px rgba(36,35,31,.1);transform:translateY(-4px)}
+.account-card-icon{color:var(--saffron);font:400 26px/1 var(--serif);margin-bottom:27px}
+.account-card-copy{display:grid;gap:6px}
+.account-card-title{font:500 23px/1.1 var(--serif)}
+.account-card-description{color:var(--muted);font-size:11px;line-height:1.55}
+.account-card-action{font-size:11px;margin-top:auto;padding-top:20px}
+.dashboard-notice{align-items:center;background:#fbf4e8;border-left:3px solid var(--saffron);display:flex;gap:24px;justify-content:space-between;padding:20px 24px}.dashboard-notice .eyebrow{margin-bottom:6px}.dashboard-notice strong{font:500 20px/1.1 var(--serif)}.dashboard-notice p:not(.eyebrow){color:var(--muted);font-size:11px;margin:7px 0 0}
+.account-card-action b,.panel-link b{color:var(--saffron);font-size:15px;margin-left:5px}
+.dashboard-overview{display:grid;gap:18px;grid-template-columns:repeat(2,1fr)}
+.dashboard-panel{background:#fff;border:1px solid var(--line);min-height:270px;padding:30px}
+.panel-heading{align-items:flex-start;display:flex;gap:15px}
+.panel-heading .eyebrow{color:var(--muted);margin-bottom:7px}
+.panel-icon{border:1px solid var(--line);color:var(--saffron);display:grid;font:500 22px/1 var(--serif);height:42px;place-items:center;width:42px}
+.dashboard-panel h2{font:500 27px/1.1 var(--serif);margin:0}
+.panel-copy{color:var(--muted);font-size:12px;line-height:1.6;margin:27px 0 20px;max-width:340px}
+.panel-copy strong{color:var(--ink)}
+.dashboard-button{margin-top:3px}
+.order-summary{align-items:center;background:var(--paper);display:flex;justify-content:space-between;margin-top:26px;padding:14px}
+.order-summary div{display:grid;gap:2px}
+.order-summary strong{font-size:12px}
+.order-summary span{color:var(--muted);font-size:10px}
+.order-status{border-radius:999px;font-size:10px;padding:5px 9px;text-transform:capitalize}
+.status-pending,.status-processing{background:#f8ead6;color:#9a641f}.status-paid,.status-delivered{background:#e7efe5;color:#47613e}.status-cancelled,.status-refunded{background:#f6e3df;color:#9b4a3b}.status-shipped{background:#e6edf2;color:#3e6178}
+.panel-link{color:var(--ink);font-size:11px;text-decoration:none;text-decoration:underline;text-decoration-color:var(--saffron);text-underline-offset:5px}
+.panel-link:hover{color:var(--saffron)}
+.wishlist-preview{display:flex;gap:12px;margin:26px 0 20px}
+.wishlist-preview a{color:var(--ink);display:grid;flex:1;font:500 13px/1.25 var(--serif);gap:8px;text-decoration:none}
+.wishlist-preview img{aspect-ratio:1.5/1;object-fit:cover;width:100%}
+.account-benefits{border-bottom:1px solid var(--line);border-top:1px solid var(--line);display:grid;gap:18px;grid-template-columns:repeat(4,1fr);padding:34px 0;text-align:center}
+.account-benefits span{color:var(--saffron);display:block;font-size:23px}
+.account-benefits strong{display:block;font:500 16px var(--serif);margin:6px 0}
+.account-benefits p{color:var(--muted);font-size:10px;margin:0}
+
+@media (max-width:900px){.account-dashboard .dashboard-grid{grid-template-columns:repeat(2,1fr)}.account-card{min-height:210px}}
+@media (max-width:700px){
+    .account-header{padding:18px 5%}.account-header nav{gap:15px}.account-shell{padding:38px 5% 55px}.dashboard-hero{padding:31px 25px}.account-dashboard h1{font-size:42px}.account-dashboard .dashboard-grid,.dashboard-overview{grid-template-columns:1fr}.account-card{min-height:185px}.account-benefits{grid-template-columns:repeat(2,1fr);padding:30px 0}.dashboard-notice{align-items:flex-start;flex-direction:column;gap:14px;padding:20px}.dashboard-panel{min-height:0;padding:25px}.wishlist-preview{max-width:330px}
+}
+@media (prefers-reduced-motion:reduce){.account-card{transition:none}.account-card:hover{transform:none}}
